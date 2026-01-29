@@ -1,0 +1,23 @@
+{
+  "id": "akashic-bridge",
+  "name": "Akashic Bridge",
+  "description": "Proxy Akashic MCP tools/resources/prompts and inject remote system prompt into workspace bootstrap.",
+  "uiHints": {
+    "mcpUrl": { "label": "Akashic MCP URL", "placeholder": "https://akashic-mcp.com/mcp" },
+    "ownerId": { "label": "Owner ID", "placeholder": "<your-akashic-owner-uuid>" },
+    "authToken": { "label": "Auth token (optional)", "sensitive": true, "placeholder": "..." },
+    "promptName": { "label": "Prompt name (optional)", "placeholder": "cursor-rules" },
+    "toolNamePrefix": { "label": "Tool prefix", "placeholder": "akashic_" }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "mcpUrl": { "type": "string" },
+      "ownerId": { "type": "string" },
+      "authToken": { "type": "string" },
+      "promptName": { "type": "string" },
+      "toolNamePrefix": { "type": "string" }
+    }
+  }
+}
